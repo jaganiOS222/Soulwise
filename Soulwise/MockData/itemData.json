@@ -1,0 +1,145 @@
+[
+    {
+        "id": 485,
+        "name": "Kids Cloth",
+        "slug": "kids-cloth",
+        "permalink": "http://flutterecommerce.geekydev.com/product/kids-cloth/",
+        "date_created": "2018-07-18T10:11:22",
+        "date_created_gmt": "2018-07-18T10:11:22",
+        "date_modified": "2018-07-18T10:12:41",
+        "date_modified_gmt": "2018-07-18T10:12:41",
+        "type": "simple",
+        "status": "publish",
+        "featured": false,
+        "catalog_visibility": "visible",
+        "description": "<p>Men Square Summer Sunglasses</p>\n",
+        "short_description": "<p>The Square Frame</p>\n",
+        "sku": "",
+        "price": "1040",
+        "regular_price": "1600",
+        "sale_price": "1040",
+        "date_on_sale_from": null,
+        "date_on_sale_from_gmt": null,
+        "date_on_sale_to": null,
+        "date_on_sale_to_gmt": null,
+        "price_html": "<del><span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&#8377;</span>1,600.00</span></del> <ins><span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\">&#8377;</span>1,040.00</span></ins>",
+        "on_sale": true,
+        "purchasable": true,
+        "total_sales": 0,
+        "virtual": false,
+        "downloadable": false,
+        "downloads": [],
+        "download_limit": -1,
+        "download_expiry": -1,
+        "external_url": "",
+        "button_text": "",
+        "tax_status": "taxable",
+        "tax_class": "",
+        "manage_stock": false,
+        "stock_quantity": null,
+        "in_stock": true,
+        "backorders": "no",
+        "backorders_allowed": false,
+        "backordered": false,
+        "sold_individually": false,
+        "weight": "",
+        "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+        },
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "shipping_class": "",
+        "shipping_class_id": 0,
+        "reviews_allowed": true,
+        "average_rating": "0.00",
+        "rating_count": 0,
+        "related_ids": [
+            134,
+            394,
+            344,
+            404,
+            395
+        ],
+        "upsell_ids": [],
+        "cross_sell_ids": [],
+        "parent_id": 0,
+        "purchase_note": "",
+        "categories": [
+            {
+                "id": 95,
+                "name": "Clothing",
+                "slug": "clothing-kids"
+            },
+            {
+                "id": 98,
+                "name": "Frocks",
+                "slug": "frocks"
+            },
+            {
+                "id": 21,
+                "name": "KIDS",
+                "slug": "kids"
+            }
+        ],
+        "tags": [],
+        "images": [
+            {
+                "id": 118,
+                "date_created": "2018-05-28T12:20:57",
+                "date_created_gmt": "2018-05-28T12:20:57",
+                "date_modified": "2018-05-28T12:20:57",
+                "date_modified_gmt": "2018-05-28T12:20:57",
+                "src": "http://flutterecommerce.geekydev.com/wp-content/uploads/2018/05/12.jpeg",
+                "name": "12",
+                "alt": "",
+                "position": 0
+            },
+            {
+                "id": 117,
+                "date_created": "2018-05-28T12:20:51",
+                "date_created_gmt": "2018-05-28T12:20:51",
+                "date_modified": "2018-05-28T12:20:51",
+                "date_modified_gmt": "2018-05-28T12:20:51",
+                "src": "http://flutterecommerce.geekydev.com/wp-content/uploads/2018/05/11.jpeg",
+                "name": "11",
+                "alt": "",
+                "position": 1
+            }
+        ],
+        "attributes": [],
+        "default_attributes": [],
+        "variations": [],
+        "grouped_products": [],
+        "menu_order": 0,
+        "meta_data": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "http://flutterecommerce.geekydev.com/wp-json/wc/v2/products/485"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http://flutterecommerce.geekydev.com/wp-json/wc/v2/products"
+                }
+            ]
+        }
+    },
+    {
+        "product2": "Product 2"
+    },
+    {
+        "product3": "Product 3"
+    },
+    {
+        "product4": "Product 4"
+    },
+    {
+        "product5": "Product 5"
+    },
+    {
+        "product6": "Product 6"
+    }
+]
