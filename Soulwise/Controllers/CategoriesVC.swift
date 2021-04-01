@@ -41,3 +41,8 @@ class CategoriesVC: WLCollectionController {
     }
 }
 
+extension CategoriesVC {
+   override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.listAllowedWidth()/4, height: UIScreen.listAllowedWidth()/4)
+    }
+}
