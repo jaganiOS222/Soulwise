@@ -10,6 +10,7 @@ import UIKit
 
 class ProductsVC: WLCollectionController {
     let productService = ProductService.init()
+    
     var productsViewModel:ProductsViewModel? {
         didSet {
             if let model = productsViewModel {
@@ -38,7 +39,5 @@ class ProductsVC: WLCollectionController {
                 }
             }
         }
-    }
-    
-    
+    }    
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class CompaniesVC: TBController {
     let companiesService = CompaniesService.init()
+    
     var companiesViewModel:CompaniesViewModel? {
         didSet {
             if let model = companiesViewModel {
@@ -46,6 +47,5 @@ class CompaniesVC: TBController {
             }            
         }
     }
-   
 }
 

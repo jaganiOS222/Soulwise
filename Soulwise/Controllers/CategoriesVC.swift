@@ -10,6 +10,7 @@ import UIKit
 
 class CategoriesVC: WLCollectionController {
     let productService = ProductService.init()
+    
     var categoriesViewModel:CategoriesViewModel? {
         didSet {
             if let model = categoriesViewModel {
