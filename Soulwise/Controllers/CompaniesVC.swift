@@ -38,6 +38,7 @@ class CompaniesVC: TBController {
             }
         }
     }
+    
     override func onSelect(row info: TBRow, indexPath: IndexPath) {
         if let model = info.rowData?.model as? CompaniesItemViewModel {
             DispatchQueue.main.async { [weak self] in
@@ -45,6 +46,7 @@ class CompaniesVC: TBController {
             }
         }
     }
+    
     override func onAction(action: CellAction, rowInfo: TBRow) {
         switch action {
         case .favBtnAction:
