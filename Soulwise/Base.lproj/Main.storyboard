@@ -91,25 +91,25 @@
             </objects>
             <point key="canvasLocation" x="1825" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="CyT-NS-5Uk">
             <objects>
-                <viewController id="s3b-uT-Btd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="s3b-uT-Btd" customClass="HomeVC" customModule="Soulwise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y59-z6-VIZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Still in working....." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w0-4B-VRZ">
-                                <rect key="frame" x="105.5" y="432" width="203" height="32.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oRc-2G-gfZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3w0-4B-VRZ" firstAttribute="centerX" secondItem="Y59-z6-VIZ" secondAttribute="centerX" id="4c0-ew-FOq"/>
-                            <constraint firstItem="3w0-4B-VRZ" firstAttribute="centerY" secondItem="Y59-z6-VIZ" secondAttribute="centerY" id="Ojg-Ea-Vm2"/>
+                            <constraint firstItem="rHr-Gs-1Ia" firstAttribute="trailing" secondItem="oRc-2G-gfZ" secondAttribute="trailing" id="Ozp-sX-lMy"/>
+                            <constraint firstItem="oRc-2G-gfZ" firstAttribute="leading" secondItem="rHr-Gs-1Ia" secondAttribute="leading" id="YTc-hj-Wkt"/>
+                            <constraint firstItem="rHr-Gs-1Ia" firstAttribute="bottom" secondItem="oRc-2G-gfZ" secondAttribute="bottom" id="bMR-1I-TCN"/>
+                            <constraint firstItem="oRc-2G-gfZ" firstAttribute="top" secondItem="rHr-Gs-1Ia" secondAttribute="top" id="yee-7p-pel"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rHr-Gs-1Ia"/>
                     </view>
@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ni9-l3-R3E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="796"/>
+            <point key="canvasLocation" x="1786" y="887"/>
         </scene>
         <!--CompaniesVC-->
         <scene sceneID="tne-QT-ifu">

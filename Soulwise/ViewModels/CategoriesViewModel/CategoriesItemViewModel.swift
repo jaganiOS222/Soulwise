@@ -8,13 +8,37 @@
 
 import Foundation
 
-class CategoriesItemViewModel: ProductsItemViewModel {
+class CategoriesItemViewModel {
+    var productsModel:ProductsModel?
     
-    override func display() -> CVSection {
+    lazy var name:String = {
+        return productsModel?.name ?? ""
+    }()
+    
+    lazy var price:Float = {
+        return productsModel?.price ?? 0.0
+    }()
+    
+    lazy var productImg:String = {
+        return productsModel?.productImg ?? ""
+    }()
+    
+    lazy var description:String = {
+        return productsModel?.description ?? ""
+    }()
+    
+    lazy var slug:String = {
+        return productsModel?.slug ?? ""
+    }()
+    
+    init(_ model:ProductsModel) {
+        self.productsModel = model
+    }
+    
+    func display() -> CVRow {
         let rowData = CVCellData.init()
         rowData.model = self
         let itemRow = CVRow.init(.categoriesCell, rowData)
-        return CVSection.init(nil, [itemRow])
+        return itemRow
     }
-    
 }

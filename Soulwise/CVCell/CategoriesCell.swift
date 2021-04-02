@@ -11,7 +11,7 @@ import UIKit
 class CategoriesCell: CVBaseCell {
     
     override func bindData(data: CVCellData) {
-        if let model = data.model as? ProductsItemViewModel {
+        if let model = data.model as? CategoriesItemViewModel {
             iconView.image = UIImage(named: model.productImg)
         }
     }

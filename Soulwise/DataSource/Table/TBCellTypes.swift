@@ -13,6 +13,7 @@ enum TBCellTypes: String {
     case gridTbCell = "GridTBCell"
     case topItemListCell = "TopItemListCell"
     case companiesTbCell = "CompaniesTBCell"
+    case meditationCell   = "MeditationCell"
 }
 
 enum CellAction {

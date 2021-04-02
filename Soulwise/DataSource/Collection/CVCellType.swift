@@ -12,6 +12,7 @@ enum CVCellType: String {
     case cvBaseCell = "CVBaseCell"
     case itemsCVCell = "ItemsCVCell"
     case categoriesCell = "CategoriesCell"
+    case emotionalCell = "EmotionalCell"
 }
 
 enum CVHeaderFooterType: String {

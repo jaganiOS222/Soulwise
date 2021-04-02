@@ -17,10 +17,11 @@ class CategoriesViewModel {
     }
     
     func display() -> [CVSection] {
-        var sections:[CVSection] = []
+        var rows:[CVRow] = []
         itemsModel.forEach({
-            sections.append($0.display())
+            rows.append($0.display())
         })
-        return sections
+        
+        return [CVSection.init(nil, rows)]
     }
 }

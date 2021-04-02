@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18174AC5261612CA00C8AD0A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18174AC4261612CA00C8AD0A /* HomeVC.swift */; };
+		18174AC82616130600C8AD0A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18174AC72616130600C8AD0A /* HomeViewModel.swift */; };
+		18174ACA2616131700C8AD0A /* HomeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18174AC92616131700C8AD0A /* HomeItemViewModel.swift */; };
+		18174ACD2616137B00C8AD0A /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18174ACB2616137B00C8AD0A /* MeditationCell.swift */; };
+		18174ACE2616137B00C8AD0A /* MeditationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18174ACC2616137B00C8AD0A /* MeditationCell.xib */; };
+		18174AD12616140800C8AD0A /* EmotionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18174ACF2616140800C8AD0A /* EmotionalCell.swift */; };
+		18174AD22616140800C8AD0A /* EmotionalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18174AD02616140800C8AD0A /* EmotionalCell.xib */; };
+		18174AF82616DB1B00C8AD0A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18174AF72616DB1B00C8AD0A /* UIViewController.swift */; };
 		1817820C261356F6003B4415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817820B261356F6003B4415 /* AppDelegate.swift */; };
 		1817820E261356F6003B4415 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817820D261356F6003B4415 /* SceneDelegate.swift */; };
 		18178210261356F6003B4415 /* CompaniesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817820F261356F6003B4415 /* CompaniesVC.swift */; };
@@ -64,6 +72,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18174AC4261612CA00C8AD0A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		18174AC72616130600C8AD0A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		18174AC92616131700C8AD0A /* HomeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewModel.swift; sourceTree = "<group>"; };
+		18174ACB2616137B00C8AD0A /* MeditationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCell.swift; sourceTree = "<group>"; };
+		18174ACC2616137B00C8AD0A /* MeditationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationCell.xib; sourceTree = "<group>"; };
+		18174ACF2616140800C8AD0A /* EmotionalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalCell.swift; sourceTree = "<group>"; };
+		18174AD02616140800C8AD0A /* EmotionalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmotionalCell.xib; sourceTree = "<group>"; };
+		18174AF72616DB1B00C8AD0A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		18178208261356F6003B4415 /* Soulwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1817820B261356F6003B4415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1817820D261356F6003B4415 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18174AC6261612F300C8AD0A /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18174AC72616130600C8AD0A /* HomeViewModel.swift */,
+				18174AC92616131700C8AD0A /* HomeItemViewModel.swift */,
+			);
+			path = HomeViewModel;
+			sourceTree = "<group>";
+		};
 		181781FF261356F6003B4415 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +225,7 @@
 				1817824226136D69003B4415 /* UICollectionView_CellRegistration..swift */,
 				1817827426149496003B4415 /* Bundle.swift */,
 				1817828B2614CA74003B4415 /* UIView.swift */,
+				18174AF72616DB1B00C8AD0A /* UIViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -234,6 +260,8 @@
 				1817825326138769003B4415 /* ItemsCVCell.xib */,
 				1832FE6E2615F19E00A3FACE /* CategoriesCell.swift */,
 				1832FE6F2615F19E00A3FACE /* CategoriesCell.xib */,
+				18174ACF2616140800C8AD0A /* EmotionalCell.swift */,
+				18174AD02616140800C8AD0A /* EmotionalCell.xib */,
 			);
 			path = CVCell;
 			sourceTree = "<group>";
@@ -280,6 +308,7 @@
 				1817820F261356F6003B4415 /* CompaniesVC.swift */,
 				1817826A261492AD003B4415 /* ProductsVC.swift */,
 				1832FE6C2615F02C00A3FACE /* CategoriesVC.swift */,
+				18174AC4261612CA00C8AD0A /* HomeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -352,6 +381,7 @@
 		1817827C26149831003B4415 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				18174AC6261612F300C8AD0A /* HomeViewModel */,
 				1832FE722615F53D00A3FACE /* CategoriesViewModel */,
 				181782942615A22D003B4415 /* ProductsViewModel */,
 				1817827D26149838003B4415 /* CompaniesViewModel */,
@@ -373,6 +403,8 @@
 			children = (
 				181782812614992A003B4415 /* CompaniesTBCell.swift */,
 				181782822614992A003B4415 /* CompaniesTBCell.xib */,
+				18174ACB2616137B00C8AD0A /* MeditationCell.swift */,
+				18174ACC2616137B00C8AD0A /* MeditationCell.xib */,
 			);
 			path = TBCell;
 			sourceTree = "<group>";
@@ -455,6 +487,7 @@
 			files = (
 				18178269261491B0003B4415 /* companies.json in Resources */,
 				18178248261372B6003B4415 /* GridTBCell.xib in Resources */,
+				18174ACE2616137B00C8AD0A /* MeditationCell.xib in Resources */,
 				1817825526138769003B4415 /* ItemsCVCell.xib in Resources */,
 				1817824D2613768C003B4415 /* CVBaseCell.xib in Resources */,
 				18178251261386B4003B4415 /* TopItemsListCell.xib in Resources */,
@@ -462,6 +495,7 @@
 				1817823526136890003B4415 /* TBCell.xib in Resources */,
 				1832FE712615F19E00A3FACE /* CategoriesCell.xib in Resources */,
 				181782882614A2EB003B4415 /* pillowProducts.json in Resources */,
+				18174AD22616140800C8AD0A /* EmotionalCell.xib in Resources */,
 				181782672614917C003B4415 /* products.json in Resources */,
 				18178215261356F8003B4415 /* Assets.xcassets in Resources */,
 				1817826526149174003B4415 /* itemData.json in Resources */,
@@ -483,17 +517,22 @@
 				18178250261386B4003B4415 /* TopItemsListCell.swift in Sources */,
 				1817827B261495E5003B4415 /* CompaniesModel.swift in Sources */,
 				1817827126149448003B4415 /* LocalService.swift in Sources */,
+				18174AF82616DB1B00C8AD0A /* UIViewController.swift in Sources */,
 				1817828A2614C4BC003B4415 /* CompaniesItemViewModel.swift in Sources */,
+				18174ACA2616131700C8AD0A /* HomeItemViewModel.swift in Sources */,
 				1832FE702615F19E00A3FACE /* CategoriesCell.swift in Sources */,
 				1817823926136C82003B4415 /* CVCellData.swift in Sources */,
 				1832FE772615F58D00A3FACE /* CategoriesItemViewModel.swift in Sources */,
 				18178210261356F6003B4415 /* CompaniesVC.swift in Sources */,
 				1817823D26136CDE003B4415 /* CVRow.swift in Sources */,
+				18174ACD2616137B00C8AD0A /* MeditationCell.swift in Sources */,
 				1817826B261492AD003B4415 /* ProductsVC.swift in Sources */,
+				18174AD12616140800C8AD0A /* EmotionalCell.swift in Sources */,
 				1817824C2613768C003B4415 /* CVBaseCell.swift in Sources */,
 				18178247261372B6003B4415 /* GridTBCell.swift in Sources */,
 				18178230261365E1003B4415 /* UIScreen_Helper.swift in Sources */,
 				1817820C261356F6003B4415 /* AppDelegate.swift in Sources */,
+				18174AC5261612CA00C8AD0A /* HomeVC.swift in Sources */,
 				1817823B26136CA8003B4415 /* CVCellType.swift in Sources */,
 				181782732614946A003B4415 /* Result.swift in Sources */,
 				1832FE742615F55C00A3FACE /* CategoriesViewModel.swift in Sources */,
@@ -513,6 +552,7 @@
 				181782282613602E003B4415 /* TBSection.swift in Sources */,
 				1817822E2613625F003B4415 /* TableView_CellRegistration.swift in Sources */,
 				1817828C2614CA74003B4415 /* UIView.swift in Sources */,
+				18174AC82616130600C8AD0A /* HomeViewModel.swift in Sources */,
 				1817820E261356F6003B4415 /* SceneDelegate.swift in Sources */,
 				181782982615A24E003B4415 /* ProductsItemViewModel.swift in Sources */,
 				1817823F26136D02003B4415 /* CVSection.swift in Sources */,

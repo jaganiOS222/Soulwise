@@ -16,11 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="133" height="144"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dow-xg-8SS">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dow-xg-8SS">
                         <rect key="frame" x="0.0" y="0.0" width="133" height="144"/>
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Dow-xg-8SS" secondAttribute="bottom" id="FVO-uH-Sb6"/>
                 <constraint firstItem="Dow-xg-8SS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GMX-Xq-omG"/>
