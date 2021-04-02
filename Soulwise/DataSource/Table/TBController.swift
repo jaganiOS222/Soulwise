@@ -16,7 +16,9 @@ class TBController: UIViewController {
         didSet {
             if let tbView = tableView {
                 tbView.backgroundColor = .clear
-                tbView.reloadData()
+                DispatchQueue.main.async {
+                    tbView.reloadData()
+                }
             }
         }
     }
@@ -32,9 +34,7 @@ class TBController: UIViewController {
             tbView.register(cellTypes())
             tbView.delegate = self
             tableView.dataSource = self
-            tbView.estimatedRowHeight = 400
-    
-            
+            tbView.estimatedRowHeight = 400            
         }
         tableDidLoad()
     }
@@ -120,16 +120,3 @@ extension TBController:UITableViewDelegate {
     }
 }
 
-extension TBController {
-    @objc func isEmptyTable() -> Bool {
-        return sections.count == 0
-    }
-    
-    @objc func emptyTableMessage() -> String? {
-        return nil
-    }
-    
-    @objc func showTryAgain() -> Bool {
-        return false
-    }
-}

@@ -15,6 +15,7 @@
 		18174AD12616140800C8AD0A /* EmotionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18174ACF2616140800C8AD0A /* EmotionalCell.swift */; };
 		18174AD22616140800C8AD0A /* EmotionalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18174AD02616140800C8AD0A /* EmotionalCell.xib */; };
 		18174AF82616DB1B00C8AD0A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18174AF72616DB1B00C8AD0A /* UIViewController.swift */; };
+		18174AFA2616E88200C8AD0A /* TBController_Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18174AF92616E88200C8AD0A /* TBController_Animation.swift */; };
 		1817820C261356F6003B4415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817820B261356F6003B4415 /* AppDelegate.swift */; };
 		1817820E261356F6003B4415 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817820D261356F6003B4415 /* SceneDelegate.swift */; };
 		18178210261356F6003B4415 /* CompaniesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817820F261356F6003B4415 /* CompaniesVC.swift */; };
@@ -80,6 +81,7 @@
 		18174ACF2616140800C8AD0A /* EmotionalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalCell.swift; sourceTree = "<group>"; };
 		18174AD02616140800C8AD0A /* EmotionalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmotionalCell.xib; sourceTree = "<group>"; };
 		18174AF72616DB1B00C8AD0A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		18174AF92616E88200C8AD0A /* TBController_Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBController_Animation.swift; sourceTree = "<group>"; };
 		18178208261356F6003B4415 /* Soulwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1817820B261356F6003B4415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1817820D261356F6003B4415 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				1817822526135E79003B4415 /* TBCellTypes.swift */,
 				181782272613602E003B4415 /* TBSection.swift */,
 				18178229261360FB003B4415 /* TBController.swift */,
+				18174AF92616E88200C8AD0A /* TBController_Animation.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				1817823D26136CDE003B4415 /* CVRow.swift in Sources */,
 				18174ACD2616137B00C8AD0A /* MeditationCell.swift in Sources */,
 				1817826B261492AD003B4415 /* ProductsVC.swift in Sources */,
+				18174AFA2616E88200C8AD0A /* TBController_Animation.swift in Sources */,
 				18174AD12616140800C8AD0A /* EmotionalCell.swift in Sources */,
 				1817824C2613768C003B4415 /* CVBaseCell.swift in Sources */,
 				18178247261372B6003B4415 /* GridTBCell.swift in Sources */,

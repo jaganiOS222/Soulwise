@@ -15,7 +15,9 @@ class WLCollectionController: UIViewController {
     var sections: [CVSection] = [] {
         didSet {
             if let collection = collectionView {
-                collection.reloadData()
+                DispatchQueue.main.async {
+                    collection.reloadData()
+                }
             }
         }
     }
@@ -83,6 +85,20 @@ extension WLCollectionController:UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.listAllowedWidth() - 20, height: 300)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        //Animation to disply cells
+        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, 0, 50, 0)
+        cell.layer.transform = rotationTransform
+        cell.alpha = 0
+        UIView.animate(withDuration: 0.75) {
+            cell.layer.transform = CATransform3DIdentity
+            cell.alpha = 1.0
+        }
+        if indexPath.section == collectionView.numberOfSections - 1 &&
+            indexPath.row == collectionView.numberOfItems(inSection: indexPath.section) - 1 {
+        }
     }
     
 }
