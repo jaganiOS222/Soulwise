@@ -24,7 +24,7 @@ class ProductsItemViewModel {
     }()
     
     lazy var description:String = {
-        return productsModel?.description ?? ""
+        return productsModel?.productDescription ?? ""
     }()
     
     lazy var slug:String = {

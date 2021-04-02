@@ -31,6 +31,7 @@ class TBGridItem {
     var itemType:      CVCellType = .cvBaseCell
     var icon:          String?
     var key:           String?
+    var hasError:      BoolRef?
     var others:        Any?
     var isHighlighted: Bool = false
 }
@@ -48,3 +49,78 @@ class TBGridRow: TBRowData {
         return CGFloat(Double(rowCount) * height)
     }()
 }
+
+class PrimitiveRef {
+    
+    var valueDidChange: (() -> Void)?
+    var value: Any? {
+        didSet(oldValue) {
+            if nil != valueDidChange {
+                if !isEqual(oldValue: oldValue) {
+                    valueDidChange!()
+                }
+            }
+        }
+    }
+    
+    init(val: Any) {
+        value = val
+        onInit()
+    }
+    
+    fileprivate func onInit() { }
+    
+    fileprivate func isEqual(oldValue: Any?) -> Bool {
+        return false
+    }
+    
+    func intValue() -> Int? {
+        if let val = value as? Int {
+            return val
+        }
+        
+        return nil
+    }
+    
+    func boolValue() -> Bool? {
+        if let val = value as? Bool {
+            return val
+        }
+        
+        return nil
+    }
+    
+    func stringValue() -> String? {
+        if let val = value as? String {
+            return val
+        }
+        
+        return nil
+    }
+}
+
+class BoolRef: PrimitiveRef {
+    
+    fileprivate override func onInit() {
+        if let val = value as? Int {
+            self.value = (val == 1) ? true : false
+        }
+        
+    }
+    
+    func toggle() {
+        if let val = value as? Bool {
+            value = !val
+        }
+    }
+    
+    override func isEqual(oldValue: Any?) -> Bool {
+        if let oldValue = oldValue as? Bool,
+           let newValue = value as? Bool {
+            return oldValue == newValue
+        }
+        return false
+    }
+}
+
+
