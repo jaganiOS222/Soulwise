@@ -39,5 +39,14 @@ class ProductsVC: WLCollectionController {
                 }
             }
         }
-    }    
+    }
+    
+    override func onSelect(row info: CVRow, indexPath: IndexPath) {
+        if let model = info.data?.model as? ProductsItemViewModel {
+            DispatchQueue.main.async { [weak self] in
+                self?.presentAlert("\(model.name) \n with price ₹\(model.price)")
+
+            }
+        }
+    }
 }

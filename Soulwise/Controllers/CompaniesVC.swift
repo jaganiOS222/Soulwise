@@ -38,13 +38,21 @@ class CompaniesVC: TBController {
             }
         }
     }
-    
+    override func onSelect(row info: TBRow, indexPath: IndexPath) {
+        if let model = info.rowData?.model as? CompaniesItemViewModel {
+            DispatchQueue.main.async { [weak self] in
+                self?.presentAlert(model.title)
+            }
+        }
+    }
     override func onAction(action: CellAction, rowInfo: TBRow) {
         switch action {
         case .favBtnAction:
             if let model = rowInfo.rowData?.model as? CompaniesItemViewModel {
-                print(model.address)
-            }            
+                DispatchQueue.main.async { [weak self] in
+                    self?.presentAlert("do u want like \(model.title)")
+                }
+            }
         }
     }
 }

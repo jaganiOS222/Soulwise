@@ -40,10 +40,21 @@ class CategoriesVC: WLCollectionController {
             }
         }
     }
+    
+    override func onSelect(row info: CVRow, indexPath: IndexPath) {
+        if let model = info.data?.model as? CategoriesItemViewModel {
+            DispatchQueue.main.async { [weak self] in
+                self?.presentAlert("\(model.name) \n with price ₹\(model.price)")
+                
+            }
+        }
+    }
 }
 
 extension CategoriesVC {
-   override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: UIScreen.listAllowedWidth()/2.18, height: UIScreen.listAllowedWidth()/2)
+    
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: UIScreen.listAllowedWidth()/2.18, height: UIScreen.listAllowedWidth()/2)
     }
 }
