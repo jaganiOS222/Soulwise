@@ -11,12 +11,7 @@ import UIKit
 class ItemsCVCell: CVBaseCell {
     @IBOutlet weak var priceLabel:UILabel!
     @IBOutlet weak var noteLabel:UILabel!
-    @IBOutlet weak var containerView: UIView!
     
-    override func awakeFromNib() {
-           super.awakeFromNib()
-           containerView.dropShadow(radius: 4, opacity: 0.3)
-       }
     
     override func bindData(data: CVCellData) {
         if let model = data.model as? ProductsItemViewModel {

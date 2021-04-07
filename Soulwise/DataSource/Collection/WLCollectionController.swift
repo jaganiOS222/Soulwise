@@ -11,7 +11,7 @@ import UIKit
 class WLCollectionController: UIViewController {
     static let spacing:CGFloat = 10.0
     @IBOutlet var collectionView: UICollectionView?
-    
+    var searchSections:[CVSection] = []
     var sections: [CVSection] = [] {
         didSet {
             if let collection = collectionView {
@@ -25,14 +25,23 @@ class WLCollectionController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        loadData()
+    }
+     func layoutSubviews() {
     }
     
+    func scrollDirection() -> UICollectionView.ScrollDirection {
+        return .vertical
+    }
     func cellTypes() -> [CVCellType] {
         return [CVCellType.cvBaseCell]
     }
     
+    func loadData() {}
     func onSelect(row info:CVRow, indexPath:IndexPath) {}
-    
+    func onChangeValue(value:Any) {}
+    func onAction(action: CellAction, rowInfo: CVRow) { }
+
     internal func registerHeadersIfRequired(collectionView: UICollectionView) { }
     
     func onLoadInternal() { }
@@ -43,6 +52,7 @@ class WLCollectionController: UIViewController {
             collection.dataSource = self
             collection.delegate = self
             let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = scrollDirection()
             layout.sectionInset = UIEdgeInsets(top: WLCollectionController.spacing, left: WLCollectionController.spacing, bottom: 0, right: WLCollectionController.spacing)
             collection.collectionViewLayout = layout
         }
@@ -63,12 +73,21 @@ extension WLCollectionController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let section = sections[indexPath.section]
-        let cellInfo = section.rows[indexPath.row]
-        let cellType = cellInfo.type
+        let cvrow = section.rows[indexPath.row]
+        let cellType = cvrow.type
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:cellType!.rawValue , for: indexPath) as! CVBaseCell
-        if let data = cellInfo.data {
+        if let data = cvrow.data {
             cell.bindData(data: data)
         }
+        cell.actionHandler = { [weak self]
+            (action) in
+            self?.onAction(action: action, rowInfo: cvrow)
+        }
+        cell.changeHandler = { [weak self] (value) in
+            self?.onChangeValue(value: value as Any)
+            
+        }
+        
         return cell
     }
 }

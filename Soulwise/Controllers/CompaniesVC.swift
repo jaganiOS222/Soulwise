@@ -55,7 +55,7 @@ class CompaniesVC: TBController {
                     self?.presentAlert("do u want like \(model.title)")
                 }
             }
-        }
+        default:break
     }
 }
-
+}

@@ -15,8 +15,12 @@ enum TBCellTypes: String {
     case companiesTbCell = "CompaniesTBCell"
     case meditationCell   = "MeditationCell"
     case feedsHeaderCell  = "FeedsHeaderCell"
+    case transriptHeaderCell = "TransriptHeaderCell"
+    case transcriptCell = "TranscriptCell"
 }
 
 enum CellAction {
     case favBtnAction
+    case launchVideo
+    case closeAction
 }

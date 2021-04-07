@@ -31,7 +31,7 @@ class ProductsVC: WLCollectionController {
         loadData()
     }
     
-    func loadData() {
+    override func loadData() {
         productService.execute { [weak self](result) in
             if result.isSuccess {
                 if let value = result.value as? [ProductsModel] {
@@ -45,7 +45,6 @@ class ProductsVC: WLCollectionController {
         if let model = info.data?.model as? ProductsItemViewModel {
             DispatchQueue.main.async { [weak self] in
                 self?.presentAlert("\(model.name) \n with price ₹\(model.price)")
-
             }
         }
     }

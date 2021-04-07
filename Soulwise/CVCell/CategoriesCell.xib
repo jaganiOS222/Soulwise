@@ -16,22 +16,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="133" height="144"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dow-xg-8SS">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cav-pD-ydR">
                         <rect key="frame" x="0.0" y="0.0" width="133" height="144"/>
-                    </imageView>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWq-bS-NQV">
+                                <rect key="frame" x="0.0" y="0.0" width="133" height="144"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hWq-bS-NQV" secondAttribute="bottom" id="VSK-9U-ZpZ"/>
+                            <constraint firstAttribute="trailing" secondItem="hWq-bS-NQV" secondAttribute="trailing" id="nsD-bK-Lqo"/>
+                            <constraint firstItem="hWq-bS-NQV" firstAttribute="leading" secondItem="Cav-pD-ydR" secondAttribute="leading" id="ppa-03-lIZ"/>
+                            <constraint firstItem="hWq-bS-NQV" firstAttribute="top" secondItem="Cav-pD-ydR" secondAttribute="top" id="tLh-a4-j03"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Dow-xg-8SS" secondAttribute="bottom" id="FVO-uH-Sb6"/>
-                <constraint firstItem="Dow-xg-8SS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GMX-Xq-omG"/>
-                <constraint firstItem="Dow-xg-8SS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KWK-1J-6ek"/>
-                <constraint firstAttribute="trailing" secondItem="Dow-xg-8SS" secondAttribute="trailing" id="o2V-9R-n8w"/>
+                <constraint firstItem="Cav-pD-ydR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IJg-6n-RoA"/>
+                <constraint firstAttribute="trailing" secondItem="Cav-pD-ydR" secondAttribute="trailing" id="SgB-iN-Rbu"/>
+                <constraint firstItem="Cav-pD-ydR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TjO-UF-TcV"/>
+                <constraint firstAttribute="bottom" secondItem="Cav-pD-ydR" secondAttribute="bottom" id="cSP-Dc-LFB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="133" height="144"/>
             <connections>
-                <outlet property="iconView" destination="Dow-xg-8SS" id="we0-mB-tmV"/>
+                <outlet property="containerView" destination="Cav-pD-ydR" id="G0m-w8-Cgi"/>
+                <outlet property="iconView" destination="hWq-bS-NQV" id="Sgt-wu-9cH"/>
             </connections>
             <point key="canvasLocation" x="77.536231884057983" y="155.35714285714286"/>
         </collectionViewCell>

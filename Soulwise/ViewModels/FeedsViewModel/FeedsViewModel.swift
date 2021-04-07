@@ -25,6 +25,7 @@ class FeedsViewModel {
     func headerRow(_ title:String) -> TBRow? {
         let rowData = TBRowData.init()
         rowData.title = title
+        rowData.hideHeaderIcon = true
         let headerRow = TBRow.init(.feedsHeaderCell, rowData)
         return headerRow
     }

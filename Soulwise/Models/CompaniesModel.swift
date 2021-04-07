@@ -9,14 +9,10 @@
 import Foundation
 
 
-struct CompaniesModel:Decodable {
-    var slug:String?
-   var name:String?
-   var address:String?
-   var city:String?
-   var state:String?
-   var zip:String?
-   var account:Int?
-   var contact: String?
-    var isLiked:Bool?
+struct CompaniesModel:Codable {
+    let slug, name, address, city: String
+    let state, zip: String
+    let account: Int
+    let contact: String
+    let isLiked: Bool
 }

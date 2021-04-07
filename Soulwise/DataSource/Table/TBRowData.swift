@@ -15,7 +15,7 @@ class TBRowData {
     var icon:String?
     var errorTitle:String?
     var backgroundColour:UIColor?
-    
+    var hideHeaderIcon:Bool? = true
     init(_ title:String? = nil, _ description:String? = nil, _ model:Any? = nil, _ icon:String? = nil, _ errorTitle:String? = nil, _ backgroundColour:UIColor? = nil) {
         self.title = title
         self.description = description

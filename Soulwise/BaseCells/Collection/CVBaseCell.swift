@@ -11,12 +11,17 @@ typealias ValueHandler = (Any?) -> Void
 
 class CVBaseCell: UICollectionViewCell {
     var changeHandler: ValueHandler?
+    var actionHandler: ActionHandler?
+
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerViewWidth: NSLayoutConstraint!
     @IBOutlet weak var header:      UILabel!
     @IBOutlet weak var subHeader:   UILabel!
     @IBOutlet weak var iconView:    UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         customize()
+        containerView.dropShadow(radius: 4, opacity: 0.3)
     }
     
     func customize() { }
@@ -45,4 +50,9 @@ extension CVBaseCell {
         }
     }
     
+    func notifyActionHandler(_ action: CellAction) {
+        if let handler = actionHandler {
+            handler(action)
+        }
+    }
 }

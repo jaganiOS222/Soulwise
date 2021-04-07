@@ -25,13 +25,8 @@ class CategoriesVC: WLCollectionController {
             CVCellType.categoriesCell
         ]
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadData()
-    }
-    
-    func loadData() {
+        
+    override func loadData() {
         productService.execute { [weak self](result) in
             if result.isSuccess {
                 if let value = result.value as? [ProductsModel] {
@@ -54,7 +49,10 @@ class CategoriesVC: WLCollectionController {
 extension CategoriesVC {
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: UIScreen.listAllowedWidth()/2.18, height: UIScreen.listAllowedWidth()/2)
+        var width:CGFloat = 0.0
+        var height:CGFloat = 0.0
+        width = UIScreen.iPad ? 2.3:2.18
+        height = UIScreen.iPad ? 1.6:1.7
+        return CGSize(width: UIScreen.listAllowedWidth()/width, height: UIScreen.listAllowedWidth()/height)
     }
 }

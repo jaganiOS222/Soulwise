@@ -10,20 +10,29 @@ import UIKit
 
 class FeedsHeaderCell: TBCell {
 
-    @IBOutlet weak var titleWidth: NSLayoutConstraint!
-    
+    @IBOutlet weak var containerVieweWidth: NSLayoutConstraint!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var closeButton: UIButton!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = UIColor.clear
-        contentView.dropShadow()
+        containerView.dropShadow()
     }
     
     override func bindDataInternal(data: TBRowData) {
         header.text = data.title
+        if let hide = data.hideHeaderIcon {
+            closeButton.isHidden = hide
+        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        titleWidth.constant =  UIScreen.listAllowedWidth() - 32
+        containerVieweWidth.constant =  UIScreen.listAllowedWidth() - 32
+    }
+    
+    @IBAction func closeButtonAction (_ sender:UIButton){
+        
     }
 }

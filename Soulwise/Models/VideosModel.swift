@@ -10,8 +10,8 @@ import Foundation
 
 
 // MARK: - Welcome
-struct Videos: Codable {
-    let categories: [Category]
+struct VideosModel: Codable {
+    let categories: [Category]?
 }
 
 // MARK: - Category
