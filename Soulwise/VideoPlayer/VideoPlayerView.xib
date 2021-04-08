@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoPlayerView" customModule="Soulwise" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="MuS-7J-CUu" id="6gk-d5-Leu"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="pMl-TH-p3N"/>
                 <outlet property="endTimeLabel" destination="dUp-hP-WZC" id="NuU-P2-S2L"/>
                 <outlet property="playButton" destination="jKl-HX-E3t" id="RxZ-r1-UwI"/>
@@ -23,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBm-fy-Tg5">
-                    <rect key="frame" x="10" y="54" width="394" height="798"/>
+                    <rect key="frame" x="5" y="44" width="404" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6M-rc-Sfb">
@@ -36,9 +37,6 @@
                                 <constraint firstAttribute="width" constant="35" id="pLS-UG-CrK"/>
                             </constraints>
                             <state key="normal" image="back"/>
-                            <connections>
-                                <action selector="backButton:" destination="-1" eventType="touchUpInside" id="EDj-gV-9h6"/>
-                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sz-ah-bVw">
                             <rect key="frame" x="20" y="379" width="374" height="60"/>
@@ -66,6 +64,9 @@
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="goforward.15" catalog="system"/>
+                                    <connections>
+                                        <action selector="forward:" destination="-1" eventType="touchUpInside" id="Rax-E2-2NU"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoV-uH-fwa">
                                     <rect key="frame" x="109.5" y="12.5" width="35" height="35"/>
@@ -76,6 +77,9 @@
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="gobackward.15" catalog="system"/>
+                                    <connections>
+                                        <action selector="backword:" destination="-1" eventType="touchUpInside" id="PDT-Bt-Wph"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,17 +163,22 @@
                         <constraint firstAttribute="trailing" secondItem="Qc8-ba-YDh" secondAttribute="trailing" constant="10" id="pqg-my-JMe"/>
                         <constraint firstItem="MuS-7J-CUu" firstAttribute="top" secondItem="Y6M-rc-Sfb" secondAttribute="top" constant="10" id="uS5-gg-rMG"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GBm-fy-Tg5" secondAttribute="bottom" constant="10" id="2Ru-WY-hpU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GBm-fy-Tg5" secondAttribute="bottom" id="2Ru-WY-hpU"/>
                 <constraint firstItem="Y6M-rc-Sfb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="75D-P8-aKc"/>
                 <constraint firstItem="Y6M-rc-Sfb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dae-wZ-Jo4"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GBm-fy-Tg5" secondAttribute="trailing" constant="10" id="l9E-oo-146"/>
-                <constraint firstItem="GBm-fy-Tg5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="lju-6Y-LOA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GBm-fy-Tg5" secondAttribute="trailing" constant="5" id="l9E-oo-146"/>
+                <constraint firstItem="GBm-fy-Tg5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="lju-6Y-LOA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y6M-rc-Sfb" secondAttribute="bottom" id="x3H-Oc-2qX"/>
-                <constraint firstItem="GBm-fy-Tg5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="xYC-uT-2Fd"/>
+                <constraint firstItem="GBm-fy-Tg5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="xYC-uT-2Fd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y6M-rc-Sfb" secondAttribute="trailing" id="yAi-Ea-4aC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

@@ -11,7 +11,7 @@ import AVFoundation
 import AVKit
 
 protocol VideoPlayerViewDelegate:AnyObject {
-    func closeView()
+    func closeView(sender:Bool)
 }
 
 class VideoPlayerView: UIView {
@@ -21,6 +21,7 @@ class VideoPlayerView: UIView {
     @IBOutlet weak var endTimeLabel:UILabel!
     @IBOutlet weak var startTimeLabel:UILabel!
     @IBOutlet weak var progressBar:UIProgressView!
+    @IBOutlet weak var backButton:UIButton!
 
     var delegate:VideoPlayerViewDelegate?
     var videoLink:String? {
@@ -44,6 +45,8 @@ class VideoPlayerView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         avPlayerController?.view.frame = videoView.bounds
+        avPlayerController?.view.cornerRadius = 10.0
+        avPlayerController?.view.layer.masksToBounds = true
         contentView.autoresizingMask = [.flexibleHeight , .flexibleWidth]
         if let playerView = avPlayerController?.view {
             videoView.addSubview(playerView)
@@ -75,7 +78,16 @@ class VideoPlayerView: UIView {
     }
     
     @IBAction func backButton(_ sender:UIButton) {
+    }
+    
+   @IBAction func forward(_ sender:UIButton) {
+       
+   }
+    
+    @IBAction func backword(_ sender:UIButton) {
+    }
+    
+    @IBAction func fullScreen(_ sender:UIButton) {
         
     }
-   
 }
