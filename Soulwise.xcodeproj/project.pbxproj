@@ -265,6 +265,7 @@
 		181781FF261356F6003B4415 = {
 			isa = PBXGroup;
 			children = (
+				1834C1C7261F1C560032FBDE /* Screenshots */,
 				1817820A261356F6003B4415 /* Soulwise */,
 				18178209261356F6003B4415 /* Products */,
 			);
@@ -281,7 +282,6 @@
 		1817820A261356F6003B4415 /* Soulwise */ = {
 			isa = PBXGroup;
 			children = (
-				1834C1C7261F1C560032FBDE /* Screenshots */,
 				1834C1C4261E49C80032FBDE /* HelperClasses */,
 				1834C1BF261E23C30032FBDE /* VideoPlayer */,
 				18174B12261784F400C8AD0A /* HeaderCell */,
