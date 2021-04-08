@@ -265,7 +265,7 @@
 		181781FF261356F6003B4415 = {
 			isa = PBXGroup;
 			children = (
-				1834C1C7261F1C560032FBDE /* Screenshots */,
+				1834C1C7261F1C560032FBDE /* images */,
 				1817820A261356F6003B4415 /* Soulwise */,
 				18178209261356F6003B4415 /* Products */,
 			);
@@ -593,7 +593,7 @@
 			path = HelperClasses;
 			sourceTree = "<group>";
 		};
-		1834C1C7261F1C560032FBDE /* Screenshots */ = {
+		1834C1C7261F1C560032FBDE /* images */ = {
 			isa = PBXGroup;
 			children = (
 				1834C1CD261F1CA30032FBDE /* list.png */,
@@ -604,7 +604,7 @@
 				1834C1C8261F1CA20032FBDE /* video1.png */,
 				1834C1CE261F1CA40032FBDE /* video2.png */,
 			);
-			path = Screenshots;
+			path = images;
 			sourceTree = "<group>";
 		};
 		1890ACB5261C883900EA5BFD /* VideosViewModel */ = {
