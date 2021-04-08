@@ -51,8 +51,8 @@ extension CategoriesVC {
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var width:CGFloat = 0.0
         var height:CGFloat = 0.0
-        width = UIScreen.iPad ? 2.3:2.18
-        height = UIScreen.iPad ? 1.6:1.7
+        width = UIScreen.iPad ? 2.32:2.25
+        height = UIScreen.iPad ? 2.7:2.32
         return CGSize(width: UIScreen.listAllowedWidth()/width, height: UIScreen.listAllowedWidth()/height)
     }
 }
