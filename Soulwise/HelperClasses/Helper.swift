@@ -9,24 +9,23 @@
 import Foundation
 import  AVKit
 class Helper {
-    private static func convertVideoTime (seconds : Int) -> String {
+    public static func convertVideoTime (seconds : Int) -> String {
         let sec = (seconds % 3600) % 60
         let minutes = (seconds % 3600) / 60
         let hours = seconds / 3600
         let videoDuration = String(format: "%02lu:%02lu:%02lu", UInt(hours), UInt(minutes), UInt(sec))
         return videoDuration
     }
-    
-    private  static func getVideoTime(url:URL) -> Int {
-        let asset = AVAsset(url: url)
-        let duration = asset.duration
-        let durationTime = CMTimeGetSeconds(duration)
-        return Int(durationTime)
-    }
-    
-  static func videoTotalTimeText(url:URL) -> String {
-        let interVals = getVideoTime(url: url)
-        let time = convertVideoTime(seconds: interVals)
-        return time
+}
+
+class LoaderView: UIImageView {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotationAnimation.toValue = .pi * 2.0 * 2 * 60.0
+        rotationAnimation.duration = 200.0
+        rotationAnimation.isCumulative = true
+        rotationAnimation.repeatCount = Float.infinity
+        self.layer.add(rotationAnimation, forKey: "rotationAnimation")
     }
 }

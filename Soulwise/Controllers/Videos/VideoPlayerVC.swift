@@ -8,25 +8,21 @@
 
 import UIKit
 
-class VideoPlayerVC: UIViewController,VideoPlayerViewDelegate {
-    func closeView(sender: Bool) {
-        print(sender)
-    }
-    
+class VideoPlayerVC: UIViewController {
    
-    
-    @IBOutlet weak var videoView:VideoPlayerView!
+    @IBOutlet weak var videoView:JMVideoPlayer!
     var videoItem:VideosItemViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         videoView.videoLink = videoItem?.videoLink
+        videoView.playVideo()
         videoView.backButton.addTarget(self, action: #selector(ontapBack(_ :)), for: .touchUpInside)
     }
     
     @objc func ontapBack(_ sender:UIButton) {
         self.dismiss(animated: true, completion: nil)
-        videoView.avPlayer.pause()
+        videoView.pauseVideo()
         
     }
     

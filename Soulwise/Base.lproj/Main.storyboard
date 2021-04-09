@@ -422,7 +422,7 @@
         <scene sceneID="oK9-Iq-wLa">
             <objects>
                 <viewController storyboardIdentifier="VideoPlayerVC" id="Hhf-Ve-a2D" customClass="VideoPlayerVC" customModule="Soulwise" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tks-lf-lyE" customClass="VideoPlayerView" customModule="Soulwise" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="tks-lf-lyE" customClass="JMVideoPlayer" customModule="Soulwise" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -587,6 +587,7 @@
                             <constraint firstItem="Tiu-mF-URa" firstAttribute="leading" secondItem="OJR-c9-Xsi" secondAttribute="leading" id="dlW-Ap-N3f"/>
                             <constraint firstItem="Tiu-mF-URa" firstAttribute="top" secondItem="OJR-c9-Xsi" secondAttribute="top" id="oPl-Kp-aJ8"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="72x-Q4-gIH"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Tiu-mF-URa" id="s7f-AB-O5w"/>

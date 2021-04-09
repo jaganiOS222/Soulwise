@@ -7,15 +7,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoPlayerView" customModule="Soulwise" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JMVideoPlayer" customModule="Soulwise" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="MuS-7J-CUu" id="6gk-d5-Leu"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="pMl-TH-p3N"/>
                 <outlet property="endTimeLabel" destination="dUp-hP-WZC" id="NuU-P2-S2L"/>
+                <outlet property="loaderView" destination="CcZ-mR-QiR" id="w42-4A-Rtq"/>
+                <outlet property="overLayView" destination="Y6M-rc-Sfb" id="Euh-Pm-omD"/>
                 <outlet property="playButton" destination="jKl-HX-E3t" id="RxZ-r1-UwI"/>
                 <outlet property="progressBar" destination="aYQ-e4-l3w" id="BA8-QX-8KX"/>
                 <outlet property="startTimeLabel" destination="5mq-G1-80M" id="oWL-QB-PVU"/>
                 <outlet property="videoView" destination="GBm-fy-Tg5" id="XnY-1J-Goz"/>
+                <outlet property="volumeButton" destination="jaP-pH-Po2" id="lPb-1q-7Bv"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -36,7 +39,8 @@
                                 <constraint firstAttribute="height" constant="35" id="7LC-Tz-3oQ"/>
                                 <constraint firstAttribute="width" constant="35" id="pLS-UG-CrK"/>
                             </constraints>
-                            <state key="normal" image="back"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="arrowshape.turn.up.left" catalog="system"/>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sz-ah-bVw">
                             <rect key="frame" x="20" y="379" width="374" height="60"/>
@@ -50,7 +54,7 @@
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
-                                    <state key="normal" image="play"/>
+                                    <state key="normal" image="play.circle.fill" catalog="system"/>
                                     <connections>
                                         <action selector="playButtonAction:" destination="-1" eventType="touchUpInside" id="9iW-qq-MPf"/>
                                     </connections>
@@ -97,7 +101,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qc8-ba-YDh">
                             <rect key="frame" x="10" y="758" width="394" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdS-2X-fpe">
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdS-2X-fpe">
                                     <rect key="frame" x="349" y="7.5" width="35" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="jQK-hf-pzU"/>
@@ -106,17 +110,21 @@
                                     <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                     <state key="normal" image="expand"/>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-pH-Po2">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-pH-Po2">
                                     <rect key="frame" x="304" y="12.5" width="25" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="KHU-rr-73a"/>
                                         <constraint firstAttribute="width" constant="25" id="dtR-6B-Kom"/>
                                     </constraints>
-                                    <state key="normal" title="1x">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="speaker.zzz" catalog="system">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="mutueUnMute:" destination="-1" eventType="touchUpInside" id="jdh-eJ-sdt"/>
+                                    </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:01:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUp-hP-WZC">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUp-hP-WZC">
                                     <rect key="frame" x="236" y="17" width="48" height="16"/>
                                     <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,7 +136,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-e4-l3w">
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-e4-l3w">
                                     <rect key="frame" x="68" y="23.5" width="163" height="3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="3" id="zxx-cH-q7M"/>
@@ -169,12 +177,21 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loader" translatesAutoresizingMaskIntoConstraints="NO" id="CcZ-mR-QiR" customClass="LoaderView" customModule="Soulwise" customModuleProvider="target">
+                    <rect key="frame" x="182" y="423" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Ip3-DY-XwS"/>
+                        <constraint firstAttribute="height" constant="50" id="OzZ-h8-2Qt"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GBm-fy-Tg5" secondAttribute="bottom" id="2Ru-WY-hpU"/>
                 <constraint firstItem="Y6M-rc-Sfb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="75D-P8-aKc"/>
                 <constraint firstItem="Y6M-rc-Sfb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dae-wZ-Jo4"/>
+                <constraint firstItem="CcZ-mR-QiR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IX9-ht-Yoa"/>
+                <constraint firstItem="CcZ-mR-QiR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Odv-nb-Qnc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GBm-fy-Tg5" secondAttribute="trailing" constant="5" id="l9E-oo-146"/>
                 <constraint firstItem="GBm-fy-Tg5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="lju-6Y-LOA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y6M-rc-Sfb" secondAttribute="bottom" id="x3H-Oc-2qX"/>
@@ -186,10 +203,12 @@
         </view>
     </objects>
     <resources>
-        <image name="back" width="26" height="26"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
         <image name="expand" width="28" height="28"/>
         <image name="gobackward.15" catalog="system" width="121" height="128"/>
         <image name="goforward.15" catalog="system" width="121" height="128"/>
-        <image name="play" width="30" height="30"/>
+        <image name="loader" width="40" height="40"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="speaker.zzz" catalog="system" width="128" height="91"/>
     </resources>
 </document>
