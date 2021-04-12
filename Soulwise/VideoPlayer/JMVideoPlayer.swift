@@ -9,10 +9,6 @@
 import UIKit
 import AVFoundation
 import AVKit
-protocol JMVideoPlayerDelegate:AnyObject {
-    func didTapOnFullScreen()
-}
-
 
 class JMVideoPlayer: UIView {
     
@@ -40,7 +36,6 @@ class JMVideoPlayer: UIView {
     fileprivate let seekDuration: Float64 = 15.0
     var avPlayerController:AVPlayerViewController? = AVPlayerViewController()
     var avPlayer:AVPlayer? = AVPlayer()
-    var delegate:JMVideoPlayerDelegate?
     var videoLink:String? {
         didSet {
             if let link = videoLink {

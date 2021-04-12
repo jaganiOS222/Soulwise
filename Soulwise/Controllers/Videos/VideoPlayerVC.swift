@@ -23,7 +23,6 @@ class VideoPlayerVC: UIViewController {
     @objc func ontapBack(_ sender:UIButton) {
         self.dismiss(animated: true, completion: nil)
         videoView.pauseVideo()
-        
     }
     
     
