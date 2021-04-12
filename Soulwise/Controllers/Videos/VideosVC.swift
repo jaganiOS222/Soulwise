@@ -15,7 +15,7 @@ class VideosVC: UIViewController {
     private var videoDetailsVC: VideoDetailsVC?
     private var upNextVC: UPNextVC?
     private var transcriptVC: TranscriptVC?
-    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination

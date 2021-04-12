@@ -9,6 +9,10 @@
 import UIKit
 import AVFoundation
 import AVKit
+protocol JMVideoPlayerDelegate:AnyObject {
+    func didTapOnFullScreen()
+}
+
 
 class JMVideoPlayer: UIView {
     
@@ -29,12 +33,14 @@ class JMVideoPlayer: UIView {
     @IBOutlet weak var loaderView: LoaderView!
     @IBOutlet weak var overLayView: UIView!
     @IBOutlet weak var volumeButton: UIButton!
+    @IBOutlet weak var speedButton: UIButton!
+    @IBOutlet weak var speedStackView: UIStackView!
 
     //MARK:- Variables
     fileprivate let seekDuration: Float64 = 15.0
     var avPlayerController:AVPlayerViewController? = AVPlayerViewController()
     var avPlayer:AVPlayer? = AVPlayer()
-    
+    var delegate:JMVideoPlayerDelegate?
     var videoLink:String? {
         didSet {
             if let link = videoLink {
@@ -69,6 +75,8 @@ class JMVideoPlayer: UIView {
         if let playerView = avPlayerController?.view {
             videoView.addSubview(playerView)
         }
+        addingSpeedButtonsProgramatically(["0.25x","0.5x","1x","2x","5x"])
+        addingTapGestures()
     }
     
     private func playVideo(link:String) {
@@ -125,31 +133,20 @@ extension JMVideoPlayer {
     @IBAction func mutueUnMute(_ sender:UIButton) {
         if sender.isSelected {
             isMuted = false
-            self.volumeButton.isSelected = false
+            volumeButton.isSelected = false
         } else {
             isMuted = true
-            self.volumeButton.isSelected = true
+            volumeButton.isSelected = true
         }
     }
-}
-
-//MARK:- Show ProgressView
-extension JMVideoPlayer {
-    func progress() {
-        avPlayer?.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 2), queue: DispatchQueue.main) { [weak self] (progressTime) in
-            if let duration = self?.avPlayer?.currentItem?.duration {
-                let durationSeconds = CMTimeGetSeconds(duration)
-                let seconds = CMTimeGetSeconds(progressTime)
-                let progress = Float(seconds/durationSeconds)
-                self?.startTimeLabel.text = Helper.convertVideoTime(seconds: Int(seconds))
-                self?.endTimeLabel.text = Helper.convertVideoTime(seconds: Int(durationSeconds))
-                DispatchQueue.main.async {
-                    self?.progressBar.progress = progress
-                    if progress >= 1.0 {
-                        self?.progressBar.progress = 0.0
-                    }
-                }
-            }
+    
+    @IBAction func speedButton(_ sender:UIButton) {
+        if sender.isSelected {
+            speedStackView.isHidden = true
+            speedButton.isSelected = false
+        } else {
+            speedStackView.isHidden = false
+            speedButton.isSelected = true
         }
     }
 }

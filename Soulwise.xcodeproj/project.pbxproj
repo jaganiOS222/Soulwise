@@ -95,6 +95,7 @@
 		1834C1D4261F1CA40032FBDE /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 1834C1CD261F1CA30032FBDE /* list.png */; };
 		1834C1D5261F1CA40032FBDE /* video2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1834C1CE261F1CA40032FBDE /* video2.png */; };
 		1834C1DD26204D5D0032FBDE /* JMVideoPlayer_Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1834C1DC26204D5D0032FBDE /* JMVideoPlayer_Observers.swift */; };
+		1844D88A2623FA2900E7587E /* JMVideoPlayer_Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844D8892623FA2900E7587E /* JMVideoPlayer_Gestures.swift */; };
 		1890ACB4261C882300EA5BFD /* VideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890ACB3261C882300EA5BFD /* VideosVC.swift */; };
 		1890ACB7261C887900EA5BFD /* VideosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890ACB6261C887900EA5BFD /* VideosService.swift */; };
 		1890ACB9261C8CDA00EA5BFD /* VideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890ACB8261C8CDA00EA5BFD /* VideosViewModel.swift */; };
@@ -205,6 +206,7 @@
 		1834C1CD261F1CA30032FBDE /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		1834C1CE261F1CA40032FBDE /* video2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video2.png; sourceTree = "<group>"; };
 		1834C1DC26204D5D0032FBDE /* JMVideoPlayer_Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMVideoPlayer_Observers.swift; sourceTree = "<group>"; };
+		1844D8892623FA2900E7587E /* JMVideoPlayer_Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMVideoPlayer_Gestures.swift; sourceTree = "<group>"; };
 		1890ACB3261C882300EA5BFD /* VideosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosVC.swift; sourceTree = "<group>"; };
 		1890ACB6261C887900EA5BFD /* VideosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosService.swift; sourceTree = "<group>"; };
 		1890ACB8261C8CDA00EA5BFD /* VideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewModel.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 				1834C1C0261E23F60032FBDE /* JMVideoPlayer.swift */,
 				1834C1C2261E24150032FBDE /* JMVideoPlayer.xib */,
 				1834C1DC26204D5D0032FBDE /* JMVideoPlayer_Observers.swift */,
+				1844D8892623FA2900E7587E /* JMVideoPlayer_Gestures.swift */,
 			);
 			path = VideoPlayer;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				1832FE772615F58D00A3FACE /* CategoriesItemViewModel.swift in Sources */,
 				18178210261356F6003B4415 /* CompaniesVC.swift in Sources */,
 				18328DA1261DE63D00365B37 /* VideoDetailsVC.swift in Sources */,
+				1844D88A2623FA2900E7587E /* JMVideoPlayer_Gestures.swift in Sources */,
 				1817823D26136CDE003B4415 /* CVRow.swift in Sources */,
 				18174ACD2616137B00C8AD0A /* MeditationCell.swift in Sources */,
 				1834C1C1261E23F60032FBDE /* JMVideoPlayer.swift in Sources */,
@@ -944,7 +948,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7RF3MH4348;
 				INFOPLIST_FILE = Soulwise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -952,8 +958,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Jagan.Soulwise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -961,7 +968,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7RF3MH4348;
 				INFOPLIST_FILE = Soulwise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -969,8 +978,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Jagan.Soulwise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

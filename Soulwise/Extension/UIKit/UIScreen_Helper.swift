@@ -11,6 +11,8 @@ import UIKit
 extension UIScreen {
     private static let deviceIdiom = UIScreen.main.traitCollection.userInterfaceIdiom
     public  static let listMaxWidth: CGFloat = 550
+    public  static let listMaxHeight: CGFloat = 1000
+
     public  static let iPad = (UIScreen.deviceIdiom == .pad)
     public  static let iPhone = (UIScreen.deviceIdiom == .phone)
     public  static let iPhoneSE =  (UIScreen.main.nativeBounds.height == 1136) //IPHONE 5,5S,5C
@@ -18,6 +20,12 @@ extension UIScreen {
     public static func listAllowedWidth() -> CGFloat {
         let screenWidth = UIScreen.main.bounds.size.width
         let allowedW: CGFloat = screenWidth <= UIScreen.listMaxWidth ? screenWidth : UIScreen.listMaxWidth
+        return allowedW
+    }
+    
+    public static func listAllowedHeight() -> CGFloat {
+        let screenWidth = UIScreen.main.bounds.size.height
+        let allowedW: CGFloat = screenWidth <= UIScreen.listMaxHeight ? screenWidth : UIScreen.listMaxHeight
         return allowedW
     }
     
